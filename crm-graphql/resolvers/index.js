@@ -1,13 +1,14 @@
 const User = require('../models/User');
 
-const { createUser } = require('./userResolver');
+const { createUser, getUsers, authenticateUser } = require('./userResolver');
 
 const resolvers = {
 	Query: {
-		getUsers: () => 'my users',
+		getUsers,
 	},
 	Mutation: {
 		createUser,
+		authenticateUser,
 	},
 };
 

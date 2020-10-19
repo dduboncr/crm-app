@@ -1,11 +1,7 @@
 const User = require('../models/User');
 
-const findOne = async (filter) => {
-	// TODO add options
-	const user = await User.findOne(filter);
-
-	return user;
-};
+const findOne = async (filter) => User.findOne(filter);
+const find = async () => User.find({});
 
 const create = async (input) => {
 	const { email } = input;
@@ -20,4 +16,5 @@ const create = async (input) => {
 module.exports = {
 	create,
 	findOne,
+	find,
 };

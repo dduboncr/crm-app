@@ -1,4 +1,4 @@
-const userDao = require('./users');
+const userDAO = require('./users');
 module.exports = {
-	userDao,
+	userDAO,
 };
